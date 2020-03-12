@@ -25,14 +25,16 @@ while True:
 
     if len(features) == 0:
         alert = "No Alerts found"
+        description = "No Alert description"
     else:
         alert = alerts['features'][0]['properties']['headline']
+        description = alerts['features'][0]['properties']['description']
 
     updated_time = datetime.datetime.strptime(alerts['updated'], '%Y-%m-%dT%H:%M:%S+00:00').strftime("%m/%d/%y %I:%M" "%p")
     current_time = datetime.datetime.now().strftime("%m/%d/%y %I:%M" "%p")
     em = discord.Embed(color=int("0xffc0c0", 16))
     em.title = alerts['title']
-    em.description = f"Current alerts: {alert}\n\nDescription: {alerts['features'][0]['properties']['description']}\n\n Updated date: {updated_time}\n Current date: {current_time}"
+    em.description = f"Current alerts: {alert}\n\nDescription: {description}\n\n Updated date: {updated_time}\n Current date: {current_time}"
     if alert == "No Alerts found":
         time.sleep(60)
     else:
