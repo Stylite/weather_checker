@@ -3,7 +3,7 @@
 
 ```bash
 git clone https://github.com/Stylite/weather_checker
-pip3 install -r -U reqs.txt
+pip3 install -U -r reqs.txt
 python3 src/main.py
 ```
 
