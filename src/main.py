@@ -11,7 +11,7 @@ with open("config.json") as config:
     config = json.load(config)
 
 headers = {
-    "User-Agent": "(stylite.me, williamstylite@gmail.com)"
+    "User-Agent": "(stylite.me, me@stylite.me)"
 }
 location = config['location_code']
 
